@@ -1,0 +1,89 @@
+/* Tông màu tham chiếu: nền kem, nâu đất — phong cách «Cà Phê Ngon» */
+:root {
+  --cp-bg: #f5ead9;
+  --cp-bg-deep: #efe2cf;
+  --cp-surface: #fffcf7;
+  --cp-surface-soft: #faf6ef;
+  --cp-brown: #8b4513;
+  --cp-brown-mid: #a0522d;
+  --cp-brown-dark: #6d3410;
+  --cp-brown-light: #c4835c;
+  --cp-text: #2c1810;
+  --cp-text-muted: #5c4033;
+  --cp-border: #e8d9c9;
+  --cp-accent-soft: rgba(139, 69, 19, 0.14);
+  --cp-shadow: rgba(44, 24, 16, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cp-bg);
+  background-image: radial-gradient(ellipse 120% 80% at 50% -20%, rgba(160, 82, 45, 0.06), transparent 55%);
+  color: var(--cp-text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  background: linear-gradient(135deg, var(--cp-brown-mid), var(--cp-brown));
+  color: #fffdf9;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(139, 69, 19, 0.28);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(139, 69, 19, 0.35);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  border: 2px solid var(--cp-brown);
+  background: var(--cp-surface);
+  color: var(--cp-brown);
+  box-shadow: none;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--cp-accent-soft);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--cp-accent-soft);
+  color: var(--cp-brown-dark);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.error {
+  color: #991b1b;
+}

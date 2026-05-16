@@ -1,0 +1,137 @@
+.layout {
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 252, 247, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--cp-border);
+  padding: 14px 22px;
+  box-shadow: 0 4px 24px var(--cp-shadow);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--cp-brown);
+}
+
+.brand__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(160, 82, 45, 0.22), rgba(139, 69, 19, 0.12));
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav a {
+  color: var(--cp-text);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav a:hover {
+  color: var(--cp-brown);
+  background: rgba(139, 69, 19, 0.08);
+}
+
+.nav a.active {
+  color: var(--cp-brown);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: inset 0 -3px 0 0 var(--cp-brown);
+}
+
+.auth-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-pill {
+  display: inline-flex;
+  align-items: center;
+  max-width: 200px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--cp-brown-mid), var(--cp-brown));
+  color: #fffdf9;
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-name {
+  font-size: 13px;
+  color: var(--cp-text-muted);
+}
+
+/* Khi chưa bọc user-pill — vẫn dùng cho tương thích */
+.auth-actions .user-name:not(.user-pill) {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--cp-accent-soft);
+  color: var(--cp-brown-dark);
+  font-weight: 600;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cp-brown-mid), var(--cp-brown-dark));
+  color: #fffdf9;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 14px rgba(109, 52, 16, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-fab:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(109, 52, 16, 0.4);
+}
+
+@media (max-width: 880px) {
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,30 @@
+.auth-page {
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+  background: var(--cp-surface);
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid var(--cp-border);
+  box-shadow: 0 18px 40px var(--cp-shadow);
+  display: grid;
+  gap: 8px;
+}
+
+.auth-form input {
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--cp-border);
+  background: var(--cp-surface-soft);
+  color: var(--cp-text);
+}
+
+.auth-form input:focus {
+  outline: 2px solid rgba(139, 69, 19, 0.35);
+  outline-offset: 1px;
+}
